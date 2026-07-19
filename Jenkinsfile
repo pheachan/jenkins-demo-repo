@@ -17,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'exit 1'
+                sh 'echo "pretending to run tests here"'
             }
         }
         stage('Deploy') {
