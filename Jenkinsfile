@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'echo "pretending to compile/package here"'
+                sh 'echo "pretending to compile/package here (from feature-test branch)"'
             }
         }
         stage('Test') {
