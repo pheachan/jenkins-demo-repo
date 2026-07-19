@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'node-lts'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -17,7 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'echo "pretending to run tests here"'
+                sh 'npm test'
             }
         }
         stage('Deploy') {
